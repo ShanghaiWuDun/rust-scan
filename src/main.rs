@@ -130,7 +130,7 @@ pub fn mk_syn_packet(src_mac: [u8; 6],
 
 
 #[bench]
-fn name(b: &mut test::Bencher) {
+fn bench_make_tcpsyn_packet(b: &mut test::Bencher) {
     b.bytes = 54;
     b.iter(|| {
         let _ = mk_syn_packet(
